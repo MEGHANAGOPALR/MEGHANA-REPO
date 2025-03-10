@@ -1,0 +1,7 @@
+#2nd order differential equation
+#Program 1
+from sympy import *
+x=symbols('x')
+y=Function('y')(x)
+DE=Eq(Derivative(y,x,2)-(5*Derivative(y,x))+(6*y),0)
+display(dsolve(DE))
