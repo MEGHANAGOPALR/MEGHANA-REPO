@@ -1,0 +1,12 @@
+#INVERSE LAPLACE TRANSFORMATION
+#PROGRAM 1
+from sympy import *
+from sympy.integrals import inverse_laplace_transform
+a=symbols('a',real=True)
+t=symbols('t',positive=True)
+s=symbols('s')
+Fs=(3*s+2)/((s+1)*(s-2))
+Fs=apart(Fs)
+ILT=simplify(inverse_laplace_transform(Fs,s,t,noconds=True))
+print('LT',Fs)
+print('ILT',ILT)
