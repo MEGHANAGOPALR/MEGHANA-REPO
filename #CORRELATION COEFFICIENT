@@ -1,0 +1,15 @@
+#CORRELATION COEFFICIENT
+#PROGRAM 1
+import numpy as np
+import pandas as pd
+data={'x': [78,89,97,69,59,79,68,57], 'Y': [125, 137, 156, 112, 107, 138,123,108]}
+df=pd.DataFrame(data)
+x=df['x']
+y=df['Y']
+xmean=x.mean()
+ymean=y.mean()
+N=len(x)
+num=((N*(x*y).sum())-(x.sum()*y.sum()))
+den=np.sqrt(((N*(x**2).sum()-(x.sum())**2)*(N*(y**2).sum()-(y.sum())**2)))
+R=num/den
+print("the corr of coff :",R)
