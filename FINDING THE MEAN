@@ -1,0 +1,12 @@
+#FINDING THE MEAN
+#PROGRAM 1
+import numpy as np
+import pandas as pd
+data={"X":[1,2,3,4,5],"Y":[100,200,300,400,500]}
+df=pd.DataFrame(data) 
+x=df["X"]
+y=df["Y"]
+xmean=x.mean()
+ymean=y.mean()
+print('the mean of x is :',xmean) 
+print('then mean of y is: ',ymean)
