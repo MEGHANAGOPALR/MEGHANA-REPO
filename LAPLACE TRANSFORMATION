@@ -1,0 +1,10 @@
+#LAPLACE TRANSFORMATION
+#PROGRAM 1
+from sympy import *
+import math
+from sympy.integrals import laplace_transform
+from sympy.abc import t,s,a
+f = input('Enter the function = ')
+Ft = factor(f) 
+Fs = apart(laplace_transform(Ft,t,s,nocards = true))
+print(Fs)
