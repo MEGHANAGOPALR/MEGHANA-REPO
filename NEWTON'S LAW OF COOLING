@@ -1,0 +1,18 @@
+#NEWTON'S LAW OF COOLING
+#PROGRAM 1
+from sympy import *
+t2 = 20
+t1 = 100
+T = 75
+t = 10
+K1 = (1/t)*log((t1-t2)/(T-t2))
+print('K = ',K1)
+K = symbols('K')
+t = symbols('t')
+T = Function('T')(t)
+T = t2+(t1-t2)*exp(-K*t)
+print('T = ',T)
+K = K1
+t = 30
+T = t2+(t1-t2)*exp(-K*t)
+print('T = ',T)
