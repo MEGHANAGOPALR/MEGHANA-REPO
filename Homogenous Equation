@@ -1,0 +1,7 @@
+#8th Program
+#Homogenous Equation
+from sympy import *
+x = symbols('x')
+y = Function('y')(x)
+equ = Eq(((x**2)*Derivative(y,x,2))-(3*x*Derivative(y,x)-(5*y)),((x**2)*sin(log(x))))
+display(dsolve(equ))
